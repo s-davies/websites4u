@@ -66,8 +66,16 @@ header div a {
   font-weight: 300;
 }
 
+header div a:hover {
+  color: #EA5BD2;
+}
+
 .navbar-selected {
   border-bottom: 1px solid black;
+}
+
+.navbar-link {
+  border-bottom: none;
 }
 
 .statement {

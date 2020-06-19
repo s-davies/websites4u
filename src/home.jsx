@@ -1,5 +1,6 @@
 import React from 'react';
 import {NavLink, Link} from 'react-router-dom';
+import { NavHashLink} from 'react-router-hash-link';
 import Image from './images/Image.jpg';
 
 class Home extends React.Component {
@@ -9,19 +10,19 @@ class Home extends React.Component {
                 <header>
                     <b>Websites4U</b>
                     <div>
-                        <NavLink exact to="/" activeClassName="navbar-selected" className="navbar-link">Home</NavLink>
-                        <Link to="/">About Us</Link>
-                        <Link to="/">What We Do</Link>
-                        <Link to="/">Pricing</Link>
-                        <Link to="/">Blog</Link>
-                        <Link to="/">Contact</Link>
+                        <NavHashLink smooth to="/#statement">Home</NavHashLink>
+                        <NavHashLink smooth to="/#about-us">About Us</NavHashLink>
+                        <NavHashLink smooth to="/#what-we-do">What We Do</NavHashLink>
+                        <NavHashLink smooth to="/#pricing">Pricing</NavHashLink>
+                        <NavHashLink smooth to="/#blog-section">Blog</NavHashLink>
+                        <NavHashLink smooth to="/#contact">Contact</NavHashLink>
                     </div>
                 </header>
-                <div className="statement">
+                <div className="statement" id="statement">
                     <h1>Websites4U</h1>
                     <h3>We are the way to go for your business.</h3>
                 </div>
-                <div className="about-us">
+                <div className="about-us" id="about-us">
                     <div>
                         <h2>It’s not about us, it’s about you. You, who need a website.</h2>
                         <div className="about-us-content">
@@ -35,7 +36,7 @@ class Home extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="what-we-do">
+                <div className="what-we-do" id="what-we-do">
                     <div>
                         <div className="what-we-do-text">
                             <h1>What We Do</h1>
@@ -48,7 +49,7 @@ class Home extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="pricing">
+                <div className="pricing" id="pricing">
                     <h2>Pricing Plans</h2>
                     <div className="plans">
                         <div className="plan thin-plan" id="basic">
@@ -97,11 +98,11 @@ class Home extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="blog-section">
+                <div className="blog-section" id="blog-section">
                     <h1>Want to learn more?</h1>
                     <button>Visit our blog</button>
                 </div>
-                <div className="contact">
+                <div className="contact" id="contact">
                     <div className="contact-text">
                         <h2>Contact us.</h2>
                         <h6>email@example.com</h6>
