@@ -97,7 +97,10 @@ class Home extends React.Component {
                         </div>
                     </div>
                 </div>
-                
+                <div className="blog-section">
+                    <h1>Want to learn more?</h1>
+                    <button>Visit our blog</button>
+                </div>
             </div>
         );
     }
