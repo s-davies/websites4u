@@ -1,38 +1,136 @@
 .App {
-  text-align: center;
+  font-family: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: calc(3vw + 1rem);
+  font-weight: 500;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2 {
+  font-size: calc(1.6vw +  1rem);
+  font-weight: 500;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h3 {
+  font-size: calc(1vw +  1rem);
+  font-weight: 500;
+  line-height: calc(2vw + 1rem);
+}
+
+h4 {
+
+}
+
+h5 {
+  font-size: calc(.3vw +  1rem);
+  font-weight: 400;
+  line-height: calc(1.2vw + 1rem);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  -webkit-box-shadow: 0px 3px 15px rgba(100, 100, 100, 0.49);
+  -moz-box-shadow: 0px 3px 15px rgba(100, 100, 100, 0.49);
+  box-shadow: 0px 3px 15px rgba(100, 100, 100, 0.49);
+}
+
+header b {
+  color: #5BEAD1;
+  font-size: 32px;
+  font-weight: 500;
+  padding-left: calc(3.6vw + 1rem);
+}
+
+header div {
+  padding-right: calc(3.5vw + 1rem);
+}
+
+header div a {
+  color: black;
+  margin-left: 12px;
+  margin-right: 12px;
+  font-weight: 300;
+}
+
+.navbar-selected {
+  border-bottom: 1px solid black;
+}
+
+.statement {
+  background-image: url("images/Image4.jpg");
+  background-color: rgba(234, 91, 210, 0.45);
+  background-blend-mode: multiply;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.statement h3 {
+  color: white;
+  padding-top: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.about-us {
+  padding: calc(2vw + 1rem) calc(10vw + 1rem);
+}
+
+.about-us h2 {
+  text-align: center;
+  padding-top: calc(9vw + 1rem);
+  padding-bottom: calc(6vw + 1rem);
+  padding-left: calc(3vw + 1rem);
+  padding-right: calc(3vw + 1rem);
+}
+
+.about-us-content {
+  display: flex;
+  align-items: center;
+}
+
+.about-us .img-holder {
+  width: 70%;
+  position: relative;
+  z-index: -1;
+}
+/* 
+.about-us .img-holder:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(234, 91, 210, 0.1);
+  height: 100%;
+} */
+
+.about-us img {
+  width: 100%;
+}
+
+.about-us .overlap-text-box {
+  width: 40%;
+  height: 100%;
+  padding: calc(3.2vw + 1rem);
+  background-color: #5BEAD1;
+  color: white;
+  margin-left: calc((3.6vw + 1rem)*(-3));
+}
+
+.about-us .overlap-text-box h3 {
+  padding-bottom: calc(0.6vw + 1rem);;
 }
