@@ -101,6 +101,41 @@ class Home extends React.Component {
                     <h1>Want to learn more?</h1>
                     <button>Visit our blog</button>
                 </div>
+                <div className="contact">
+                    <div className="contact-text">
+                        <h2>Contact us.</h2>
+                        <h6>email@example.com</h6>
+                        <h6>(555) 555-5555</h6>
+                        <h6>123 Demo Street</h6>
+                        <h6>New York, NY 12345</h6>
+                        <div>
+                            <a href="/"><i className="fab fa-instagram"></i></a>
+                            <a href="/"><i className="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                    <div className="contact-form">
+                        <div id="form-name">
+                            <div>
+                                <h6>Name *</h6>
+                                <input type="text"/>
+                                <h6>First Name</h6>
+                            </div>
+                            <div>
+                                <input type="text" />
+                                <h6>Last Name</h6>
+                            </div>
+                        </div>
+                        <div id="email-field">
+                            <h6>Email *</h6>
+                            <input type="text" />
+                        </div>
+                        <div>
+                            <h6>Message *</h6>
+                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                        </div>
+                        <button>Send</button>
+                    </div>
+                </div>
             </div>
         );
     }
