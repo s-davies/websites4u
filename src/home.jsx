@@ -48,7 +48,55 @@ class Home extends React.Component {
                         </div>
                     </div>
                 </div>
-
+                <div className="pricing">
+                    <h2>Pricing Plans</h2>
+                    <div className="plans">
+                        <div className="plan thin-plan" id="basic">
+                            <h3>Basic</h3>
+                            <h6>Domain hosting</h6>
+                            <h6>1 email hosting</h6>
+                            <h6>Landing page</h6>
+                            <h6 className="empty">empty</h6>
+                            <h6 className="empty">empty</h6>
+                            <h6 className="empty">empty</h6>
+                            <h6 className="empty">empty</h6>
+                            <h3>$1 / month</h3>
+                        </div>
+                        <div className="plan thick-plan" id="basic-plus">
+                            <h3>Basic+</h3>
+                            <h6>Domain hosting</h6>
+                            <h6>3 email hosting</h6>
+                            <h6>Landing page + 3 additional pages</h6>
+                            <h6>Contact form</h6>
+                            <h6 className="empty">empty</h6>
+                            <h6 className="empty">empty</h6>
+                            <h6 className="empty">empty</h6>
+                            <h3>$3 / month</h3>
+                        </div>
+                        <div className="plan thin-plan" id="pro">
+                            <h3>Pro</h3>
+                            <h6>Domain hosting</h6>
+                            <h6>3 email hosting</h6>
+                            <h6>Landing page + 5 additional pages</h6>
+                            <h6>Contact form</h6>
+                            <h6>Appointment management</h6>
+                            <h6>Other goodies</h6>
+                            <h6 className="empty">empty</h6>
+                            <h3>$5 / month</h3>
+                        </div>
+                    </div>
+                    <div className="plan-buttons">
+                        <div className="thin-plan-button">
+                            <button>Choose plan</button>
+                        </div>
+                        <div className="thick-plan-button">
+                            <button>Choose plan</button>
+                        </div>
+                        <div className="thin-plan-button">
+                            <button>Choose plan</button>
+                        </div>
+                    </div>
+                </div>
                 
             </div>
         );
