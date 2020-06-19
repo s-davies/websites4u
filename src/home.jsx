@@ -136,6 +136,13 @@ class Home extends React.Component {
                         <button>Send</button>
                     </div>
                 </div>
+                <footer>
+                    <h6>© 2020 Websites4U</h6>
+                    <div>
+                        <a href="/"><i className="fab fa-instagram"></i></a>
+                        <a href="/"><i className="fab fa-facebook-f"></i></a>
+                    </div>
+                </footer>
             </div>
         );
     }
