@@ -35,6 +35,21 @@ class Home extends React.Component {
                         </div>
                     </div>
                 </div>
+                <div className="what-we-do">
+                    <div>
+                        <div className="what-we-do-text">
+                            <h1>What We Do</h1>
+                            <h5>It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something more. Or maybe you have a creative project to share with the world. Whatever it is, the way you tell your story online can make all the difference.</h5>
+                        </div>
+                        <div className="iframe-outer">
+                            <div className="iframe-container">
+                                <iframe title="what-we-do" src="https://www.youtube.com/embed/Er4W4YGU0-4" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
             </div>
         );
     }

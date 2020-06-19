@@ -3,7 +3,7 @@
 }
 
 h1 {
-  font-size: calc(3vw + 1rem);
+  font-size: calc(2.6vw + 1rem);
   font-weight: 500;
 }
 
@@ -24,7 +24,7 @@ h4 {
 
 h5 {
   font-size: calc(.3vw +  1rem);
-  font-weight: 400;
+  font-weight: 300;
   line-height: calc(1.2vw + 1rem);
 }
 
@@ -98,6 +98,7 @@ header div a {
 .about-us-content {
   display: flex;
   align-items: center;
+  padding-bottom: calc(6vw + 1rem);
 }
 
 .about-us .img-holder {
@@ -133,4 +134,49 @@ header div a {
 
 .about-us .overlap-text-box h3 {
   padding-bottom: calc(0.6vw + 1rem);;
+}
+
+.what-we-do {
+  background-color: #EA5BD2;
+  color: white;
+  padding: 0px calc(10vw + 1rem);
+}
+
+.what-we-do > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.what-we-do-text {
+  flex: 1;
+  margin-right: calc(10vw + 1rem);
+  padding-top: calc(7.6vw + 1rem);
+  padding-bottom: calc(7.6vw + 1rem);
+} 
+
+.iframe-container {
+  overflow: hidden;
+  /* // Calculated from the aspect ration of the content (in case of 16:9 it is 9/16= 0.5625) */
+  padding-top: 56.25%;
+  position: relative;
+  flex: 1 0;
+}
+ 
+.iframe-container iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+}
+
+.what-we-do h1 {
+  padding-bottom: calc(1vw + 1rem);
+}
+
+.iframe-outer {
+  height: 100%;
+  flex: 2;
 }
