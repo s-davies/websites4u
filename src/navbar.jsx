@@ -8,7 +8,9 @@ class Navbar extends React.Component {
         return (
             <header>
                 <Fade bottom>
-                    <b>Websites4U</b>
+                    <Link to="/">
+                        <b>Websites4U</b>
+                    </Link>
                 </Fade>
                 <div>
                     <Fade bottom>
