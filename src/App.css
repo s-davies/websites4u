@@ -55,7 +55,7 @@ header b {
   padding-left: calc(3.6vw + 1rem);
 }
 
-header div {
+header > div {
   padding-right: calc(3.5vw + 1rem);
 }
 
@@ -64,6 +64,10 @@ header div a {
   margin-left: 12px;
   margin-right: 12px;
   font-weight: 300;
+}
+
+header .react-reveal {
+  display: inline;
 }
 
 header div a:hover {
