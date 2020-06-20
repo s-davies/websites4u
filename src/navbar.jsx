@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavHashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
 
 class Navbar extends React.Component {
@@ -23,7 +24,7 @@ class Navbar extends React.Component {
                         <NavHashLink smooth to="/#pricing">Pricing</NavHashLink>
                     </Fade>
                     <Fade bottom>
-                        <NavHashLink smooth to="/#blog-section">Blog</NavHashLink>
+                        <Link to="/blog">Blog</Link>
                     </Fade>
                     <Fade bottom>
                         <NavHashLink smooth to="/#contact">Contact</NavHashLink>

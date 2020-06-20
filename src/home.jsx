@@ -1,10 +1,63 @@
 import React from 'react';
-// import {NavLink, Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 // import { NavHashLink} from 'react-router-hash-link';
 import Image from './images/Image.jpg';
 import Fade from 'react-reveal/Fade';
 
 class Home extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            submitted: false,
+            plan1: false,
+            plan2: false,
+            plan3: false,
+            first: "",
+            last: "",
+            email: "",
+            message: "",
+            error: false
+        }
+    }
+    handleSubmit() {
+        if (this.state.first.length === 0 || this.state.last.length === 0 || this.state.email.length === 0 || this.state.message.length === 0) {
+            this.setState({ error: "Please complete all fields" });
+        } else {
+            this.setState({submitted: true, error: false});
+        }
+    }
+
+    handleSelected(plan) {
+        return e => {
+            if (plan === "plan1" && this.state.plan1) {
+                this.setState({plan1: false});
+            } else if (plan === "plan1" && !this.state.plan1) {
+                this.setState({ plan1: true, plan2: false, plan3: false });
+            } else if (plan === "plan2" && this.state.plan2) {
+                this.setState({ plan2: false });
+            } else if (plan === "plan2" && !this.state.plan2) {
+                this.setState({ plan2: true, plan1: false, plan3: false });
+            } else if (plan === "plan3" && this.state.plan3) {
+                this.setState({ plan3: false });
+            } else if (plan === "plan3" && !this.state.plan3) {
+                this.setState({ plan3: true, plan2: false, plan1: false });
+            }
+        }
+    }
+
+    firstChange(e) {
+        this.setState({ first: e.currentTarget.value });
+    }
+    lastChange(e) {
+        this.setState({ last: e.currentTarget.value });
+    }
+    emailChange(e) {
+        this.setState({ email: e.currentTarget.value });
+    }
+    messageChange(e) {
+        this.setState({ message: e.currentTarget.value });
+    }
+
     render() {
         return (
             <div className="home">
@@ -147,17 +200,23 @@ class Home extends React.Component {
                     <div className="plan-buttons">
                         <div className="thin-plan-button">
                             <Fade bottom>
-                                <button>Choose plan</button>
+                                {!this.state.plan1 ?
+                                <button onClick={this.handleSelected("plan1")}>Choose plan</button>
+                                    : <button className="button-selected" onClick={this.handleSelected("plan1")}>Selected</button>}
                             </Fade>
                         </div>
                         <div className="thick-plan-button">
                             <Fade bottom>
-                                <button>Choose plan</button>
+                                {!this.state.plan2 ?
+                                    <button onClick={this.handleSelected("plan2")}>Choose plan</button>
+                                    : <button className="button-selected" onClick={this.handleSelected("plan2")}>Selected</button>}
                             </Fade>
                         </div>
                         <div className="thin-plan-button">
                             <Fade bottom>
-                                <button>Choose plan</button>
+                                {!this.state.plan3 ?
+                                <button onClick={this.handleSelected("plan3")}>Choose plan</button>
+                                    : <button className="button-selected" onClick={this.handleSelected("plan3")}>Selected</button>}
                             </Fade>
                         </div>
                     </div>
@@ -167,7 +226,7 @@ class Home extends React.Component {
                     <h1>Want to learn more?</h1>
                     </Fade>
                     <Fade bottom>
-                    <button>Visit our blog</button>
+                    <Link to="/blog">Visit our blog</Link>
                     </Fade>
                 </div>
                 <div className="contact" id="contact">
@@ -195,17 +254,21 @@ class Home extends React.Component {
                             </div>
                         </Fade>
                     </div>
-                    
+                    {this.state.submitted ?
+                        <div className="contact-form">
+                        <h6>Thank you!</h6>
+                        </div> :
+                        
                     <div className="contact-form">
                         <Fade bottom>
                         <div id="form-name">
                             <div>
                                 <h6>Name *</h6>
-                                <input type="text"/>
+                                <input onChange={this.firstChange.bind(this)} type="text"/>
                                 <h6>First Name</h6>
                             </div>
                             <div>
-                                <input type="text" />
+                                <input onChange={this.lastChange.bind(this)} type="text" />
                                 <h6>Last Name</h6>
                             </div>
                         </div>
@@ -213,19 +276,24 @@ class Home extends React.Component {
                         <Fade bottom>
                         <div id="email-field">
                             <h6>Email *</h6>
-                            <input type="text" />
+                            <input onChange={this.emailChange.bind(this)}type="text" />
                         </div>
                         </Fade>
                         <Fade bottom>
                         <div>
                             <h6>Message *</h6>
-                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                            <textarea onChange={this.messageChange.bind(this)}name="" id="" cols="30" rows="10"></textarea>
                         </div>
                         </Fade>
+                        {this.state.error ?
+                            <p className="error">{this.state.error}</p> : ""
+                        }
                         <Fade bottom>
-                        <button>Send</button>
+                        <button onClick={this.handleSubmit.bind(this)}>Send</button>
                         </Fade>
                     </div>
+
+                    }
                 </div>
                 
             </div>
