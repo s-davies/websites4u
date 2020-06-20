@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/websites4u/static/css/main.331a5b38.chunk.css",
+    "main.js": "/websites4u/static/js/main.de56c821.chunk.js",
+    "main.js.map": "/websites4u/static/js/main.de56c821.chunk.js.map",
+    "runtime-main.js": "/websites4u/static/js/runtime-main.fd12dea3.js",
+    "runtime-main.js.map": "/websites4u/static/js/runtime-main.fd12dea3.js.map",
+    "static/js/2.c2171e41.chunk.js": "/websites4u/static/js/2.c2171e41.chunk.js",
+    "static/js/2.c2171e41.chunk.js.map": "/websites4u/static/js/2.c2171e41.chunk.js.map",
+    "index.html": "/websites4u/index.html",
+    "precache-manifest.262d83ffa54d9bbd4d1f94cdccd5dafd.js": "/websites4u/precache-manifest.262d83ffa54d9bbd4d1f94cdccd5dafd.js",
+    "service-worker.js": "/websites4u/service-worker.js",
+    "static/css/main.331a5b38.chunk.css.map": "/websites4u/static/css/main.331a5b38.chunk.css.map",
+    "static/js/2.c2171e41.chunk.js.LICENSE.txt": "/websites4u/static/js/2.c2171e41.chunk.js.LICENSE.txt",
+    "static/media/Image.jpg": "/websites4u/static/media/Image.4aefeea9.jpg",
+    "static/media/App.css": "/websites4u/static/media/Image5.8199f572.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fd12dea3.js",
+    "static/js/2.c2171e41.chunk.js",
+    "static/css/main.331a5b38.chunk.css",
+    "static/js/main.de56c821.chunk.js"
+  ]
+}
